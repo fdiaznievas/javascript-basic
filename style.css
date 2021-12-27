@@ -1,0 +1,118 @@
+body{
+    margin: 0;
+    font-family: 'Fira Sans', sans-serif;
+    
+    /*Centra el texto incluso del p que no podía centrar*/
+    text-align: center;
+    color: white;
+}
+
+button{
+    background-color: rgb(209, 70, 186);
+    border-radius: 3px;
+    list-style: none;
+    text-decoration: none;
+    font-family:inherit;
+    border: 1px solid rgba(255, 245, 238, 0.45);
+    border-radius: 0 20px ;
+    padding: 4px 9px 4px 9px;
+}
+
+/*Contenedor total*/
+.container {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: rgba(82, 83, 182, 0.774);
+    display: grid;
+    grid-template-rows: 2fr 5fr 1fr;
+}
+
+/*Seccion Header*/
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Seccion central*/
+.figuras{
+    
+    box-shadow:  10px 15px 33px 0px rgb(0, 0, 0, 1);
+    color: seashell; /*Color texto*/
+
+    background-color: rgb(255, 245, 238);
+    background-image: url(assets/background.png);
+    
+    /* Efecto sobre la imagen de fondo */
+    mix-blend-mode: luminosity;
+    
+    display: grid;
+    justify-content: center; /* <-- Sirve para resoluciones más bajas, ojo*/
+    gap: 20px;
+    
+    /*Ordena las columnas en 3 fracciones*/
+    grid-template-columns: 1fr 1fr 1fr; 
+}
+
+/*Cada figura geométrica individual*/
+.box{
+    box-shadow: 0px 8px 25px 10px rgb(0 0 0 / 40%);
+    
+    background-color: rgba(255, 245, 238, 0.36);
+    mix-blend-mode: normal;
+    
+    /* Formato */
+    display: flex;
+    flex-flow: column;
+    justify-content:space-around;
+    align-self:center;
+    overflow: hidden;
+    
+    /*Espaciado*/
+    margin: 0 20px 0 20px;
+    padding: 0 20px 20px 20px;
+    
+    border: 1px solid rgba(255, 245, 238, 0.45);
+    border-radius: 0 20px ;
+}
+
+.input{
+    margin: 10px;
+}
+
+.boton-input{
+    color: rgb(16, 5, 48);
+    background-color: white;
+    margin: 4px;
+    text-decoration: none;
+    font-family:inherit;
+}
+
+
+/* form .botones button{
+    background-color: salmon;
+    margin: 10px;
+    gap: 10px;
+} */
+
+
+
+
+@media (max-width: 700px) {
+    
+    /* .header{
+        box-shadow: inset -50px 60px 80px 0px rgba(39, 100, 128, 0.3);        
+    } */
+    
+    .figuras{
+        display: block;
+        /* box-shadow: 0 0 45px 20px rgba(255, 255, 255, 0.4); */
+    }
+    
+    .box{
+        margin: 40px 0 40px 0;
+        border-radius: 0;
+    }
+
+}
